@@ -8,11 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public int lives = 3;
     public int score = 0;
-
     public TMP_Text lbl_Score;
     public TMP_Text lbl_Lives;
-    
-
     public event Action ScoreIncreased;
     public event Action LivesDecreased;
     public MenuManager MenuManager;
@@ -30,10 +27,8 @@ public class GameManager : MonoBehaviour
     void Update()
     {
  
-        if (lives <= 0 && !shouldStopSpawning)
+        if (lives <= 0)
         {
-            // Stop spawning
-            shouldStopSpawning = true;
             spawnManager.StopSpawning();
             if (score > PlayerPrefs.GetInt("HighScore", 0))
             {
@@ -61,13 +56,12 @@ public class GameManager : MonoBehaviour
         LivesDecreased?.Invoke(); 
     }
 
-    private void UpdateScoreUI()
+    public void UpdateScoreUI()
     {
         lbl_Score.text = "Score: " + score;
     }
 
-    
-    private void UpdateLivesUI()
+    public void UpdateLivesUI()
     {
         lbl_Lives.text = "Lives: " + lives;
     }

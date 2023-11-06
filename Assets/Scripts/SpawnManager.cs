@@ -11,12 +11,10 @@ public class SpawnManager : MonoBehaviour
     public MenuManager menuManager;
     private int bombsSpawned = 0;
 
-
     void Start()
     {
         respawnTime = initialRespawnTime;
     }
-
    
     void Update()
     {
@@ -50,6 +48,10 @@ public class SpawnManager : MonoBehaviour
 
     public void StopSpawning()
     {
-        respawnTime = float.MaxValue;
+        initialRespawnTime = float.MaxValue;
+        foreach (Transform child in bombParent.transform)
+    {
+        Destroy(child.gameObject);
+    }
     }
 }
