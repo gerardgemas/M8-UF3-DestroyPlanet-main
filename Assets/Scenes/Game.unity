@@ -546,7 +546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombParent: {fileID: 1746521585}
-  respawnTime: 3
+  initialRespawnTime: 3
+  respawnTime: 0
   prefabBomb: {fileID: 6968468672884414227, guid: 67f6fa5b9db874e069f62bb7ed7bac7a, type: 3}
   menuManager: {fileID: 2104270512}
 --- !u!1 &558648457
@@ -593,7 +594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c24450b2cd246f0809b44f1689511e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 3
+  lives: 1000
   score: 0
   lbl_Score: {fileID: 571747477}
   lbl_Lives: {fileID: 1769543606}
@@ -1008,6 +1009,7 @@ MonoBehaviour:
   explosionSound: {fileID: 8300000, guid: c4a94cb5ccc1f4544bb599608f8ec9e6, type: 3}
   defusalSound: {fileID: 8300000, guid: b597a52b9452e0342a36ffb91c76c3e1, type: 3}
   loseSound: {fileID: 8300000, guid: f698e41d9fc312f48bb459b3f39ffb9c, type: 3}
+  winSound: {fileID: 8300000, guid: 29a73b0dc1e2a164cb5890cbe6e00270, type: 3}
   gameManager: {fileID: 558648460}
 --- !u!1 &963194225
 GameObject:
@@ -2298,6 +2300,10 @@ PrefabInstance:
     - target: {fileID: 1098318907123292, guid: 34a5e34bd888e0b4883bb80aa3cd437d, type: 3}
       propertyPath: m_Name
       value: Rocket26_Red
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098318907123292, guid: 34a5e34bd888e0b4883bb80aa3cd437d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4265910001507952, guid: 34a5e34bd888e0b4883bb80aa3cd437d, type: 3}
       propertyPath: m_LocalScale.x
