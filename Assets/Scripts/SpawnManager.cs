@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
                 bombsSpawned++;
 
                 // fem que cada 3 bombes que spawnejin vagi tot mes rapid
-                if (bombsSpawned > 3)
+                if (bombsSpawned > 3 && initialRespawnTime > 1.2)
                 {
                     initialRespawnTime -= 0.4f; // Reduce spawn time
                     bombsSpawned = 0;
